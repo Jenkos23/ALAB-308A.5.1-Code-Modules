@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Modules and Import assignment</title>
+</head>
+<body>
+    <h1> Part 1: Math Problems</h1>
+    <p>Math is challenging, which is why we have the computer solve the math problems for us. Often in programming, <br> you will need to determine the logic behind an operation, and then tell the computer how to do it. Once you have established that logic, it can be reused. This is how we handle repetitive tasks. </p>
+
+    
+
+    <script type="module">
+        import {isUnder25, isValid, n1, n2, n3, n4, isdivideBy5, firstbigthanFive, isTwoOdd, isSum50,isUnique } from './ALAB-308.1.1/index.js';
+        import {estFuelBudg,costPerMiles, gallonPerMiles, travelDuration} from './ALAB-308.1.1/math.js'
+
+                     // INDEX.JS FILE
+            //check if is divisible by 5
+            console.log(`The first number is larger than the last nmuber: ${firstbigthanFive}`);
+
+            //Arithmetic chain
+            console.log(`This is the answer to the arithemetic chain: ${(((n1-n2)* n3 ) % n4)}`)
+            //check if is under 25
+            console.log(`All they numbers are under 25: ${isUnder25}`);
+
+            console.log(`Comparing the numbers:  ${isValid}`);
+            
+
+
+                            //MATH.JS FILE:
+            // How much it will cost to travel 55 miles per Hour 
+        console.log(` It will cost $${costPerMiles(1500,30)} to travel at 55 miles per hour`);
+          // How much it will cost to travel 60 miles per Hour 
+        console.log(` It will cost $${costPerMiles(1500,28)} to travel at 60 miles per hour`);
+            // How much it will cost to travel 75 miles per Hour 
+        console.log(` It will cost $${costPerMiles(1500,23)} to travel at 75 miles per hour`);
+
+
+        // How many gallons will I need to travel for 1500 miles at 55 miles perHour 
+       console.log(` It will take the total of ${gallonPerMiles(1500,30)} gallons to travel at 55 miles `);
+        // How many gallons will I need to travel for 1500 miles at 60 miles perHour 
+       console.log(` It will take the total of ${gallonPerMiles(1500,28)} gallons to travel at 60 miles `);
+        // How many gallons will I need to travel for 1500 miles at 75 miles perHour 
+        console.log(` It will take the total of ${gallonPerMiles(1500,23)} gallons to travel at 75 miles `);
+
+
+
+         //time duration it will take me to travel at 55 miles per hour
+        console.log(` It will take apprioximately ${travelDuration(1500,55)}hrs to travel at 55 miles per hour `);
+        //time duration it will take me to travel at 60 miles per hour
+        console.log(` It will take apprioximately ${travelDuration(1500,60)}hrs to travel at 60 miles per hour `);
+        //time duration it will take me to travel at 75 miles per hour
+        console.log(` It will take apprioximately ${travelDuration(1500,75)}hrs to travel at 75 miles per hour `);
+
+        
+console.log(` Comparing the results, It depends on the individual making the trip, most will not mind spending alot to get to there destination on time.`)
+console.log (`Since the cost of fuel bugdeted for the trip is $${estFuelBudg}. The Most appriopate and cheaper means to travel is to travel at 55 miles per hour,for 30 miles per gallon which is less expensive and cost $${costPerMiles(1500,30)} to travel at that rate `)
+
+                
+
+
+
+    </script>
+</body>
+</html>
